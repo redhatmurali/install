@@ -181,12 +181,11 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-Type=forking
+Type=oneshot
+RemainAfterExit=yes
 ExecStart=${ZEEK_BIN}/zeekctl start
 ExecStop=${ZEEK_BIN}/zeekctl stop
 ExecReload=${ZEEK_BIN}/zeekctl restart
-Restart=on-failure
-RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
