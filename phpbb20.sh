@@ -22,6 +22,8 @@
 #     sudo PHPBB_VER=auto ./phpbb20.sh   # always grab the newest 3.3.x
 #
 #  Default phpBB version: 3.3.17
+# certutil -addstore -f Root "D:\phpbb-lab.crt"
+# sudo SSL=1 FORCE=1 ./phpbb20.sh
 #===============================================================================
 set -euo pipefail
 
